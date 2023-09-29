@@ -29,7 +29,7 @@ class DetailUserActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailUserBinding
     private val detailViewModel by viewModels<DetailViewModel>() {
-        ViewModelFactory.getInstance(application, SettingPrefrence.getInstance(application.dataStore))
+        ViewModelFactory.getInstance(application)
     }
     private val favoriteViewModel: FavoriteViewModel by viewModels()
 

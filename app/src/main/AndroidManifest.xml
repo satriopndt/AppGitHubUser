@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppGitHubUser"
         tools:targetApi="31">
         <activity
+            android:name=".splashscreen.SplashScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.insert.FavoriteActivity"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:exported="false"
             android:screenOrientation="sensor" />
         <activity
-            android:name=".ui.MenuActivity"
+            android:name=".setting.SettingActivity"
             android:exported="false"
             android:screenOrientation="sensor" />
         <activity

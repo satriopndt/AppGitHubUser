@@ -8,5 +8,5 @@
     <string name="tab_following">Following</string>
     <string name="favorite">Favorite</string>
     <string name="theme">Theme</string>
-    <string name="dark_mode"></string>
+    <string name="dark_mode">Theme Mode</string>
 </resources>

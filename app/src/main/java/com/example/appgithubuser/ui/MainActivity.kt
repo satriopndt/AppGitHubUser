@@ -18,6 +18,7 @@ import com.example.appgithubuser.databinding.ActivityMainBinding
 import com.example.appgithubuser.setting.SettingActivity
 import com.example.appgithubuser.setting.SettingPrefrence
 import com.example.appgithubuser.setting.SettingViewModel
+import com.example.appgithubuser.setting.SettingViewModelFactory
 import com.example.appgithubuser.setting.dataStore
 import com.example.appgithubuser.ui.insert.FavoriteActivity
 import com.example.appgithubuser.viewModel.ViewModelFactory
@@ -87,6 +88,18 @@ class MainActivity : AppCompatActivity() {
             showLoading(false)
         }
 
+        val pref = SettingPrefrence.getInstance(application.dataStore)
+        val darkViewModel = ViewModelProvider(this, SettingViewModelFactory(pref)).get(
+            SettingViewModel::class.java
+        )
+
+        darkViewModel.getThemeSettings().observe(this) { isDarkModeActive: Boolean ->
+            if (isDarkModeActive) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
 
     }
 

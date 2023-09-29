@@ -17,9 +17,8 @@ class SettingActivity : AppCompatActivity() {
 
         val switchTheme = findViewById<SwitchMaterial>(R.id.switch_dark_mode)
 
-        val pref = SettingPrefrence.getInstance(dataStore)
-        val themeViewModelFactory = ViewModelFactory(pref)
-        val themeViewModel = ViewModelProvider(this, themeViewModelFactory).get(
+        val pref = SettingPrefrence.getInstance(application.dataStore)
+        val themeViewModel = ViewModelProvider(this, SettingViewModelFactory(pref)).get(
             SettingViewModel::class.java
         )
        themeViewModel.getThemeSettings().observe(this) { isDarkModeActive: Boolean ->
