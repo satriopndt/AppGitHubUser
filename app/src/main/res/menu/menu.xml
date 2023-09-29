@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/baseline_settings_24"
+        android:id="@+id/setting_page"
+        android:title="@string/setting"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/ic_favorite"
+        android:id="@+id/favorite_page"
+        android:title="string/favorite"
+        app:showAsAction="ifRoom"/>
+</menu>

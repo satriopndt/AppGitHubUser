@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppGitHubUser</string>
+    <string name="searchbar_hint">Search User</string>
+    <string name="setting">Setting</string>
+    <string name="following">%1$s Following</string>
+    <string name="followers">%1$s Followers</string>
+    <string name="tab_followers">Followers</string>
+    <string name="tab_following">Following</string>
+    <string name="favorite">Favorite</string>
+    <string name="theme">Theme</string>
+    <string name="dark_mode"></string>
+</resources>
